@@ -1,45 +1,57 @@
 const SocialMediaIcons = () => {
   return (
-    <div className="flex justify-center md:justify-start my-10 gap-7">
+    <div className='flex justify-center md:justify-start my-10 gap-7'>
       <a
-        href="https://www.linkedin.com"
-        className="hover:opacity-50 transition duration-500"
-        target="_blank"
-        rel="noreferrer"
+        href='https://www.linkedin.com/in/arsh-ali-236194233/'
+        className='hover:opacity-50 transition duration-500'
+        target='_blank'
+        rel='noreferrer'
       >
-        <img src="../assets/linkedin.png" alt="linkedin-link" />
+        <img
+          src='../assets/linkedin.png'
+          alt='linkedin-link'
+        />
       </a>
       <a
-        href="https://www.twitter.com"
-        className="hover:opacity-50 transition duration-500"
-        target="_blank"
-        rel="noreferrer"
+        href='https://twitter.com/_LeviXackermann'
+        className='hover:opacity-50 transition duration-500'
+        target='_blank'
+        rel='noreferrer'
       >
-        <img src="../assets/twitter.png" alt="twitter-link" />
+        <img
+          src='../assets/twitter.png'
+          alt='twitter-link'
+        />
       </a>
-      <a
+      {/* <a
         href="https://www.facebook.com"
         className="hover:opacity-50 transition duration-500"
         target="_blank"
         rel="noreferrer"
       >
         <img src="../assets/facebook.png" alt="facebook-link" />
+      </a> */}
+      <a
+        href='https://instagram.com/the_chanchanman2774?igshid=YmMyMTA2M2Y='
+        className='hover:opacity-50 transition duration-500'
+        target='_blank'
+        rel='noreferrer'
+      >
+        <img
+          src='../assets/instagram.png'
+          alt='instagram-link'
+        />
       </a>
       <a
-        href="https://www.instagram.com"
-        className="hover:opacity-50 transition duration-500"
-        target="_blank"
-        rel="noreferrer"
+        href='https://github.com/arshali2774'
+        className='hover:opacity-50 transition duration-500'
+        target='_blank'
+        rel='noreferrer'
       >
-        <img src="../assets/instagram.png" alt="instagram-link" />
-      </a>
-      <a
-        href="https://www.linkedin.com"
-        className="hover:opacity-50 transition duration-500"
-        target="_blank"
-        rel="noreferrer"
-      >
-        <img src="../assets/github-logo.png" alt="github-link" />
+        <img
+          src='../assets/github-logo.png'
+          alt='github-link'
+        />
       </a>
     </div>
   );

@@ -1,5 +1,6 @@
 import LineGradient from '../components/LineGradient';
 import { motion } from 'framer-motion';
+import useMediaQuery from '../hooks/useMediaQuery';
 
 const container = {
   hidden: {},
@@ -13,26 +14,54 @@ const projectVariant = {
   visible: { opacity: 1, scale: 1 },
 };
 
-const Project = ({ title }) => {
+const Project = ({ title, description, link }) => {
   const overlayStyles = `absolute h-full w-full opacity-0 hover:opacity-90 transition duration-500 bg-grey z-30 flex flex-col justify-center items-center text-center p-16 text-deep-blue`;
+  const mobileOverlayStyles = `absolute bottom-0 opacity-80 h-1/2 w-full bg-grey z-30 flex flex-col justify-center items-center text-center p-16 text-deep-blue`;
   const projectTitle = title.split(' ').join('-').toLowerCase();
-  return (
+  const isAboveSmallScreens = useMediaQuery('(min-width:768px)');
+  return isAboveSmallScreens ? (
     <motion.div
       variants={projectVariant}
       className='relative'
     >
       <div className={overlayStyles}>
         <p className='text-2xl font-playfair'>{title}</p>
-        <p className='mt-7'>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi,
-          delectus optio sit tempora dicta molestiae?
-        </p>
+        <p className='mt-7'>{description}</p>
+        <a
+          href={link}
+          target='_blank'
+          rel='noreferrer'
+          className='font-semibold text-red text-lg tracking-widest mt-4 hover:bg-deep-blue hover:text-white duration-500 px-3 py-1'
+        >
+          LINK
+        </a>
       </div>
       <img
-        src={`../assets/${projectTitle}.jpeg`}
+        src={`../assets/${projectTitle}.png`}
         alt={projectTitle}
+        className='w-[400px] h-[400px] object-cover object-left-bottom'
       />
     </motion.div>
+  ) : (
+    <div className='relative'>
+      <div className={mobileOverlayStyles}>
+        <p className='text-2xl font-playfair'>{title}</p>
+        <p className='mt-7'>{description}</p>
+        <a
+          href={link}
+          target='_blank'
+          rel='noreferrer'
+          className='font-semibold text-red text-lg tracking-widest mt-4 hover:bg-deep-blue hover:text-white duration-500 px-3 py-1'
+        >
+          LINK
+        </a>
+      </div>
+      <img
+        src={`../assets/${projectTitle}.png`}
+        alt={projectTitle}
+        className='w-[400px] h-[400px] object-cover object-left-bottom'
+      />
+    </div>
   );
 };
 
@@ -62,8 +91,8 @@ const Projects = () => {
           </div>
         </div>
         <p className='mt-10 mb-10'>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis,
-          necessitatibus.
+          These are some projects which helped me in expanding my knowledge and
+          becoming a better developer.
         </p>
       </motion.div>
       {/* Project section */}
@@ -80,15 +109,31 @@ const Projects = () => {
           <div className='flex justify-center text-center items-center p-10 bg-red max-w-[400px] max-h-[400px] text-2xl font-playfair font-semibold '>
             BEAUTIFUL USER INTERFACES
           </div>
-          <Project title='Project 1' />
-          <Project title='Project 2' />
+          <Project
+            title='Project 1'
+            description='Speed Typing Test app, let you check your typing speed in words per minute'
+            link='https://arshali2774.github.io/FlashType'
+          />
+          <Project
+            title='Project 2'
+            description='Project name generator, it helps user in choosing names for their new project and also checks for domain availability.'
+            link='https://arshali2774.github.io/NameIt'
+          />
           {/* row 2*/}
-          <Project title='Project 3' />
-          <Project title='Project 4' />
-          <Project title='Project 5' />
+          <Project
+            title='Project 3'
+            description='A static website with SVG animations and minimalist design using GRID.'
+            link='https://wonderful-aryabhata-efd2da.netlify.app/'
+          />
+          <Project
+            title='Project 4'
+            description='A static website with SVG animations and minimalist design using FLEXBOX.'
+            link='https://nifty-benz-321fd3.netlify.app/'
+          />
+          {/* <Project title='Project 5' /> */}
           {/* row 2*/}
-          <Project title='Project 6' />
-          <Project title='Project 7' />
+          {/* <Project title='Project 6' />
+          <Project title='Project 7' /> */}
           <div className='flex justify-center text-center items-center p-10 bg-blue max-w-[400px] max-h-[400px] text-2xl font-playfair font-semibold '>
             SMOOTH USER EXPERIENCE
           </div>

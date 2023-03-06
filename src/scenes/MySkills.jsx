@@ -27,9 +27,36 @@ const MySkills = () => {
             MY <span className='text-red'>SKILLS</span>
           </p>
           <LineGradient width='w-1/3' />
-          <p className='mt-10 mb-7'>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis,
-            necessitatibus.
+          <p className='mt-10 mb-7 font-opensans tracking-wider leading-6'>
+            {/* c/c++ mysql  */}I have developed skills in mordern
+            web-development with strong base of{' '}
+            <span className='text-red font-semibold'>JavaScript</span> and
+            proficient knowledge in{' '}
+            <span className='text-yellow font-semibold'>MERN stack</span>, use
+            of <span className='text-blue font-semibold'>GIT & Github</span>,
+            login authentication using{' '}
+            <span className='text-red font-semibold'>
+              Google Auth and PassportJS Auth
+            </span>
+            , generating{' '}
+            <span className='text-yellow font-semibold'>RESTapi</span> and
+            server side code for backend and testing of API in{' '}
+            <span className='text-blue font-semibold'>Postman</span>. Also,
+            gained skills in{' '}
+            <span className='text-red font-semibold'>CSS & SASS</span> with
+            different libraries like{' '}
+            <span className='text-yellow font-semibold'>
+              Tailwindcss & Bootstrap
+            </span>
+            . Learned about libraries and tools like{' '}
+            <span className='text-blue font-semibold'>
+              Redux, Axios, Vite, Framer-motion
+            </span>
+            . Deployed apps using{' '}
+            <span className='text-red font-semibold'>
+              Netlify, Github pages, Vercel, Heroku, Cyclic
+            </span>
+            .
           </p>
         </motion.div>
         <div className='mt-16 md:mt-0'>
@@ -74,8 +101,9 @@ const MySkills = () => {
             <div className='w-1/2 md:w-3/4 h-32 bg-blue absolute right-0 top-0 z-[-1]' />
           </div>
           <p className='mt-5'>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati
-            dolorem aut harum commodi sed deserunt!
+            Developed 2 years of experience in mordern web-development.
+            Self-learned developer, with the help of internet, documentation and
+            practicing concepts.
           </p>
         </motion.div>
         {/* Innovative */}
@@ -100,8 +128,8 @@ const MySkills = () => {
             <div className='w-1/2 md:w-3/4 h-32 bg-red absolute right-0 top-0 z-[-1]' />
           </div>
           <p className='mt-5'>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati
-            dolorem aut harum commodi sed deserunt!
+            Developed innovative solutions and designs for personal projects and
+            learned new ways to do things.
           </p>
         </motion.div>
         {/* Imaginative */}
@@ -126,8 +154,9 @@ const MySkills = () => {
             <div className='w-1/2 md:w-3/4 h-32 bg-yellow absolute right-0 top-0 z-[-1]' />
           </div>
           <p className='mt-5'>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati
-            dolorem aut harum commodi sed deserunt!
+            Cool animations and smooth flow in websites have always struck me
+            with awe. Repeating those designs to understand how they work surely
+            affected my imagination of new design ideas.
           </p>
         </motion.div>
       </div>
