@@ -39,7 +39,7 @@ const Project = ({ title, description, link }) => {
       <img
         src={`../assets/${projectTitle}.png`}
         alt={projectTitle}
-        className='w-[400px] h-[400px] object-cover object-left-bottom'
+        className='w-full h-[400px] object-center'
       />
     </motion.div>
   ) : (
@@ -59,7 +59,7 @@ const Project = ({ title, description, link }) => {
       <img
         src={`../assets/${projectTitle}.png`}
         alt={projectTitle}
-        className='w-[400px] h-[400px] object-cover object-left-bottom'
+        className='w-full h-[400px] object-center'
       />
     </div>
   );
@@ -106,7 +106,7 @@ const Projects = () => {
           variants={container}
         >
           {/* row 1 */}
-          <div className='flex justify-center text-center items-center p-10 bg-red max-w-[400px] max-h-[400px] text-2xl font-playfair font-semibold '>
+          <div className='flex justify-center text-center items-center p-10 bg-red max-h-[400px] text-2xl font-playfair font-semibold '>
             BEAUTIFUL USER INTERFACES
           </div>
           <Project
@@ -130,11 +130,21 @@ const Projects = () => {
             description='A static website with SVG animations and minimalist design using FLEXBOX.'
             link='https://nifty-benz-321fd3.netlify.app/'
           />
+          <Project
+            title='Project 5'
+            description='A blog website build using AstroJS, to understand how easy is to use AstroJS.'
+            link='https://elaborate-begonia-9d1333.netlify.app/'
+          />
+          <Project
+            title='Project 6'
+            description='My old portfolio, a static website with SVG animations and minimalist design using FLEXBOX.'
+            link='https://hungry-allen-930542.netlify.app/'
+          />
           {/* <Project title='Project 5' /> */}
           {/* row 2*/}
           {/* <Project title='Project 6' />
           <Project title='Project 7' /> */}
-          <div className='flex justify-center text-center items-center p-10 bg-blue max-w-[400px] max-h-[400px] text-2xl font-playfair font-semibold '>
+          <div className='flex justify-center text-center items-center p-10 bg-blue  max-h-[400px] text-2xl font-playfair font-semibold col-span-2'>
             SMOOTH USER EXPERIENCE
           </div>
         </motion.div>
